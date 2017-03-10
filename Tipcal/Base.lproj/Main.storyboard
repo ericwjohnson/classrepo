@@ -31,11 +31,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" id="PK7-AJ-Q5u">
-                                <rect key="frame" x="7" y="216" width="304" height="8"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TnB-5U-SC3">
                                 <rect key="frame" x="16" y="122" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -67,18 +62,46 @@
                                     <action selector="calulateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="UZ2-dD-uGT"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="oFr-wb-Hhl">
-                                <rect key="frame" x="13" y="174" width="295" height="29"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.0" maxValue="0.25" id="7WK-v5-j8B">
+                                <rect key="frame" x="14" y="173" width="292" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="18%"/>
-                                    <segment title="20%"/>
-                                    <segment title="25%"/>
-                                </segments>
                                 <connections>
-                                    <action selector="percentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LZ9-Oz-pkJ"/>
+                                    <action selector="tipSliderChanged:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ORs-Xi-3tZ"/>
                                 </connections>
-                            </segmentedControl>
+                            </slider>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" id="PK7-AJ-Q5u">
+                                <rect key="frame" x="8" y="234" width="304" height="8"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3cz-SF-hHA">
+                                <rect key="frame" x="115" y="205" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="😐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kkg-tH-w9Y">
+                                <rect key="frame" x="142" y="151" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="😀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nvb-NG-JGa">
+                                <rect key="frame" x="274" y="148" width="37" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="☹️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ym9-am-uUv">
+                                <rect key="frame" x="19" y="151" width="37" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.65943752300000003" green="1" blue="0.80744823980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -95,8 +118,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="8HV-XX-l3O" id="4LK-7a-T6E"/>
+                        <outlet property="currPercentLabel" destination="3cz-SF-hHA" id="PJq-po-tUM"/>
+                        <outlet property="happyLabel" destination="kkg-tH-w9Y" id="edg-d8-2gT"/>
                         <outlet property="tipLabel" destination="vPg-lz-f3f" id="TOc-Om-ZCo"/>
-                        <outlet property="tipSelector" destination="oFr-wb-Hhl" id="at4-l6-bnl"/>
+                        <outlet property="tipSlider" destination="7WK-v5-j8B" id="XtF-In-fkk"/>
                         <outlet property="totalLabel" destination="WgQ-Ms-MTp" id="bcG-QN-JAl"/>
                     </connections>
                 </viewController>
