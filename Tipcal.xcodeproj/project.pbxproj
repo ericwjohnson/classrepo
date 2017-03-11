@@ -15,6 +15,7 @@
 		818EBE5A1E6C954A00D405CA /* TipcalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818EBE591E6C954A00D405CA /* TipcalTests.swift */; };
 		818EBE651E6C954A00D405CA /* TipcalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818EBE641E6C954A00D405CA /* TipcalUITests.swift */; };
 		81D884891E7117290040AFD5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D884881E7117290040AFD5 /* SettingsViewController.swift */; };
+		81F364641E7392CE00B0E423 /* prework_readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 81F364631E7392CE00B0E423 /* prework_readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		818EBE641E6C954A00D405CA /* TipcalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipcalUITests.swift; sourceTree = "<group>"; };
 		818EBE661E6C954A00D405CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D884881E7117290040AFD5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		81F364631E7392CE00B0E423 /* prework_readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = prework_readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		818EBE381E6C954A00D405CA = {
 			isa = PBXGroup;
 			children = (
+				81F364631E7392CE00B0E423 /* prework_readme.md */,
 				818EBE431E6C954A00D405CA /* Tipcal */,
 				818EBE581E6C954A00D405CA /* TipcalTests */,
 				818EBE631E6C954A00D405CA /* TipcalUITests */,
@@ -265,6 +268,7 @@
 				818EBE471E6C954A00D405CA /* ViewController.swift in Sources */,
 				818EBE451E6C954A00D405CA /* AppDelegate.swift in Sources */,
 				81D884891E7117290040AFD5 /* SettingsViewController.swift in Sources */,
+				81F364641E7392CE00B0E423 /* prework_readme.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
