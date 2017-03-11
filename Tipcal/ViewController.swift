@@ -9,11 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-//    @IBOutlet weak var tipSelector: UISegmentedControl!
+
     @IBOutlet weak var tipSlider: UISlider!
 
     @IBOutlet weak var happyLabel: UILabel!
-        @IBOutlet weak var billField: UITextField!
+    @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     
@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         sliderVal = 0.25
         }
         
-//        tipSelector.selectedSegmentIndex = selectedDefault
         
         tipSlider.setValue(sliderVal, animated: true)
         currPercentLabel.text = String(format:"%.0f",tipSlider.value * 100) + "%"

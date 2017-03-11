@@ -19,11 +19,9 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         let defaults = UserDefaults()
         let selectedDefault = defaults.integer(forKey: "defaultTip")
-        //let selectedSliderDefault = defaults.bool(forKey: "defaultSliderSwitch")
         
         defaultTipSelector.selectedSegmentIndex = selectedDefault
         
-        //sliderSwitch.setOn(true, animated: false)
         
         
     }
@@ -33,15 +31,6 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-/*    @IBAction func selectSliderDefault(_ sender: Any) {
-        
-        let defaults = UserDefaults()
-        let selectedDefault = sliderSwitch.isOn
-        
-        defaults.setValue(selectedDefault, forKey: "defaultSliderSwitch")
-        
-    }
-*/
     @IBAction func selectDefault(_ sender: Any) {
         //let tipPercents = [0.18,0.20,0.25]
         let defaults = UserDefaults()
@@ -49,7 +38,7 @@ class SettingsViewController: UIViewController {
         
         
         defaults.setValue(selectedDefault, forKey: "defaultTip")
-  //      sliderSwitch.setOn(false, animated: true)
+  
        
     }
     /*
