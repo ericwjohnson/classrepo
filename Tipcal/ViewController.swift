@@ -22,7 +22,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //happyLabel.text = "\u{1F603}"
+        // make bill entry active and open the keyboard
+        
+        billField.becomeFirstResponder()
+        
         var sliderVal : Float
         let defaults = UserDefaults()
         let selectedDefault = defaults.integer(forKey: "defaultTip")
@@ -55,16 +58,14 @@ class ViewController: UIViewController {
 
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
+        self.billField.becomeFirstResponder()
+        
     }
 
     @IBAction func calulateTip(_ sender: Any) {
         
-        //let tipPercents = [0.18,0.20,0.25]
         
         let bill = Double(billField.text!) ?? 0
-        /*let tip = bill *
-         tipPercents[tipSelector.selectedSegmentIndex]
- */
         let tipPercent = tipSlider.value
         let tip = bill * Double(tipPercent)
         let total = bill + tip
